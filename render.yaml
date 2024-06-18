@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: custom-gpt
+    env: python
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPOSITORY
+    entrypoint: ["python", "app.py"]
+    buildCommand: ["pip install Flask requests openai"]
+    startCommand: ["python", "app.py"]
+    branch: main
+    healthCheckPath: /
+    plan: free
